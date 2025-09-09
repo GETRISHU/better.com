@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Better.com Design System */
+    --background: 0 0% 100%;
+    --foreground: 155 23% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 155 23% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 23% 18%;
+
+    /* Better.com primary green */
+    --primary: 155 68% 18%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Better.com bright green accent */
+    --accent-green: 147 100% 42%;
+    --accent-green-foreground: 155 68% 18%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 155 23% 18%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 155 23% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 147 100% 42%;
+
+    /* Better.com gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(155, 68%, 18%) 0%, hsl(155, 58%, 25%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(155, 68%, 18%) 0%, hsl(155, 48%, 15%) 100%);
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode uses same Better.com colors */
+    --background: 155 68% 18%;
+    --foreground: 0 0% 100%;
+
+    --card: 155 58% 25%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 155 58% 25%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 147 100% 42%;
+    --primary-foreground: 155 68% 18%;
+
+    --secondary: 155 48% 22%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 155 48% 22%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 155 48% 22%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 155 48% 22%;
+    --input: 155 48% 22%;
+    --ring: 147 100% 42%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  /* Hero background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .dark-gradient {
+    background: var(--gradient-dark);
+  }
+}
